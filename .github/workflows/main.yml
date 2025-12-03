@@ -1,0 +1,14 @@
+name: First Workflow #name of workflow then will go to choose trigger
+
+on:
+  push: # this the trigger 
+    branches:
+      - main
+
+jobs:
+  example-job: #name of job
+    runs-on: ubuntu-latest #runner then go to steps
+
+    steps:
+      - name: print a welcome message
+        run: echo "Welcome to our first GitHub Actions"
