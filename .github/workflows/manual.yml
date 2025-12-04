@@ -1,5 +1,17 @@
 on:
     workflow_dispatch:
+        inputs:
+            enviroment:
+                description: "Choose one"
+                required: true
+                default: "staging"
+                type: choice
+                options:
+                    - staging
+                    - prod
+                    - test
+        
+        
 
 jobs:
     deoply:
