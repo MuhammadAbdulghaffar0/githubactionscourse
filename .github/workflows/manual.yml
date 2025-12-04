@@ -3,7 +3,7 @@ on:
 
 jobs:
     deoply:
-        runs-on: unbuntu-latest
+        runs-on: ubuntu-latest
         steps:
             - name: Deploy app
               run: echo "Deploying App"
