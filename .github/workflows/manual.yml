@@ -1,0 +1,9 @@
+on:
+    workflow_dispatch:
+
+jobs:
+    deoply:
+        runs-on: unbuntu-latest
+        steps:
+            - name: Deploy app
+              run: echo "Deploying App"
