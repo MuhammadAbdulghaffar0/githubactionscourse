@@ -11,7 +11,7 @@ on: #that mean you want to do a trigger when push happen into 2 branches {develo
             - "package.json"
             - "package-lock.json"
     
-    pull:_request:
+    pull_request:
         branches:
             - main
             - "release/**"
