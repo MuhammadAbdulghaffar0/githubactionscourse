@@ -3,7 +3,7 @@ name: First Workflow #name of workflow then will go to choose trigger
 on:
   push: # this the trigger 
     branches:
-      - main
+      - release
 
 jobs:
   example-job: #name of job
