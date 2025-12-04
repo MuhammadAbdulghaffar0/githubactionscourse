@@ -1,0 +1,28 @@
+#in this workflow we will learn how to do your first trigger
+
+on: #that mean you want to do a trigger when push happen into 2 branches {develop and master only}
+    push:
+        branches: 
+            - develop 
+            - master
+            - "release/**" #that mean take any branch start with release
+        paths:
+            - "test/**"
+            - "package.json"
+            - "package-lock.json"
+    
+    pull:_request:
+        branches:
+            - main
+            - "release/**"
+
+jobs:
+    test:
+        runs-on: ubuntu-latest
+        steps:
+        - name: Checkout code
+          uses: actions/checkout@v4.2.2
+
+        - name: Run tests
+          run: npm test
+        
